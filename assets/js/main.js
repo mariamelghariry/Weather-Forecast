@@ -37,7 +37,7 @@ var week = document.querySelector(".week-day");
 var dayAfter = document.querySelector(".tomorrow");
 var dayAfterAfter = document.querySelector(".after-tomorrow");
 
-// ~================================== Functions ==============================
+// ~======================> Functions ==========>
 
 // ! weather + fetch function
 
@@ -47,6 +47,7 @@ async function weather(a) {
   );
   var data = await response.json();
   console.log(data);
+  date();
 
   // ! City info
   var cityName = data.location.name;
@@ -68,7 +69,7 @@ async function weather(a) {
   var rainChance = data.forecast.forecastday[0].day.daily_chance_of_rain;
   rain.innerHTML = rainChance + "%";
 
-// ! Wind speed in km/h
+  // ! Wind speed in km/h
   var windSpeed = data.current.wind_kph;
   wind.innerHTML = `<p>${windSpeed}km/h</p>`;
 
@@ -76,7 +77,7 @@ async function weather(a) {
   var windDir = data.current.wind_dir;
   windDirection.innerHTML = windDir;
 
-  // &=====================================Tomorrow forcust =================================
+  // &==================Tomorrow forcust =============>
 
   var tomorrowMaxTempreture = data.forecast.forecastday[1].day.maxtemp_c;
   tomorrowMaxTemp.innerHTML = `<p class ="fs-2">${tomorrowMaxTempreture}°C</p>`;
@@ -92,7 +93,7 @@ async function weather(a) {
     "https:" + tomorrowImage
   } " alt="" class="w-25 mx-auto" />`;
 
-  // &=====================================After tomorrow forcust ===============================
+  // &===================After tomorrow forcust =========>
 
   var aTomorrowMaxTempreture = data.forecast.forecastday[2].day.maxtemp_c;
   aTomorrowMaxTemp.innerHTML = `<p class ="fs-2">${aTomorrowMaxTempreture}°C</p>`;
@@ -109,6 +110,16 @@ async function weather(a) {
   } " alt="" class="w-25 mx-auto" />`;
 }
 
+// ! User location Function
+
+async function position() {
+  var response = await fetch(`https://ipinfo.io?token=529acd5eab6495`);
+  var data = await response.json();
+  console.log(data);
+  weather(data.city);
+}
+position();
+
 // ! Sending country name from search input
 function displayCountry() {
   countryName = country.value;
@@ -117,7 +128,6 @@ function displayCountry() {
 
 // ! search button evvenlistener
 search.addEventListener("click", displayCountry);
-
 
 // ! (current + tomorrow + after tomorrow) Date
 
@@ -138,46 +148,35 @@ const monthes = [
   "December",
 ];
 
-const d = new Date();
-let m = monthes[d.getMonth()];
+function date() {
+  const d = new Date();
 
-month.innerHTML = m;
-day.innerHTML = days;
+  let m = monthes[d.getMonth()];
+  month.innerHTML = m;
+  day.innerHTML = days;
 
-const weekday = [
-  "Sunday",
-  "Monday",
-  "Tuesday",
-  "Wednesday",
-  "Thursday",
-  "Friday",
-  "Saturday",
-];
+  
+  const weekday = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  const w = new Date();
+  let f = weekday[w.getDay()];
 
-const w = new Date();
-let f = weekday[w.getDay()];
+  week.innerHTML = f;
 
-week.innerHTML = f;
+  const today = new Date();
+  const tomorrow = new Date(today);
+  tomorrow.setDate(today.getDate() + 1);
+  dayAfter.innerHTML = weekday[tomorrow.getDay()];
 
-const today = new Date();
-const tomorrow = new Date(today);
-tomorrow.setDate(today.getDate() + 1);
-dayAfter.innerHTML = weekday[tomorrow.getDay()];
-
-
-const afterTomorrow = new Date(today);
-afterTomorrow.setDate(today.getDate() + 2);
-dayAfterAfter.innerHTML = weekday[afterTomorrow.getDay()];
-
-
-
-
-async function position() {
-  var response = await fetch(
-    `https://ipinfo.io?token=529acd5eab6495`
-  );
-  var data = await response.json();
-  console.log(data)
-  weather(data.city)
+  const afterTomorrow = new Date(today);
+  afterTomorrow.setDate(today.getDate() + 2);
+  dayAfterAfter.innerHTML = weekday[afterTomorrow.getDay()];
+  
 }
-position();

@@ -83,3 +83,16 @@ input{
 footer{
   background-color: #262936;
 }
+
+@media screen and (max-width: 1020px) {
+  .nav-forecast {
+    font-size: 12px;
+  }
+  .nav-forecast2{
+    font-size: 11px;
+  }
+  .footer-input{
+    width: 98%;
+
+  }
+}

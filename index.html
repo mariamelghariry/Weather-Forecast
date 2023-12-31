@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>weather</title>
+    <link rel="icon" href="assets/images/logo2x.ico">
 
     <!-- !==========font awesome -->
     <script
@@ -25,8 +26,8 @@
           <div class="d-flex align-items-center text-white gap-2">
             <img src="assets/images/logo2x.png" alt="" class="image" />
             <div class="d-flex flex-column justify-content-center">
-              <p class="text-capitalize m-0">weather forecust</p>
-              <span class="nav-span text-capitalize">tagline goes here</span>
+              <p class="text-capitalize m-0 nav-forecast">weather forecust</p>
+              <span class="nav-span text-capitalize nav-forecast2">tagline goes here</span>
             </div>
           </div>
           <button
@@ -76,12 +77,12 @@
         </button>
       </div>
     </header>
-    <div class="card-group container py-5">
-      <div class="card card-1 text-white">
+    <div class="row py-5 gap-5 justify-content-center w-100 ">
+      <div class="card card-1 text-white col-lg-3 col-9">
         <div
           class="card-header d-flex justify-content-between align-items-center title-1"
         >
-          <p class="week-day m-0">Friday</p>
+          <p class="week-day m-0"></p>
           <p class="m-0">
             <span class="day m-0"></span> <span class="month m-0"></span>
           </p>
@@ -89,16 +90,16 @@
         <div class="card-body">
           <h5 class="card-title city"></h5>
           <div class="d-flex justify-content-between">
-            <p class="today-forecast display-1 fw-bolder m-0 align-self-center">19°C</p>
+            <p class="today-forecast display-1 fw-bolder m-0 align-self-center"></p>
             <div class="weather-img w-100 d-flex justify-content-end">
 
             </div>
           </div>
-          <p class="weather-condition text-primary mt-3">Partly cloudy</p>
+          <p class="weather-condition text-primary mt-3"></p>
           <div class="d-flex justify-content-evenly">
             <div class="text-center"> 
               <i class="fa-solid fa-umbrella"></i>
-              <p class="rain">20%</p>
+              <p class="rain"></p>
             </div>
             <div class="text-center">
               <i class="fa-solid fa-wind"></i>
@@ -112,7 +113,7 @@
           </div>
         </div>
       </div>
-      <div class="card card-2 text-white">
+      <div class="card card-2 text-white col-lg-3 col-9">
         <div class="card-header title-2 text-center">
           <small class="tomorrow"></small>
         </div>
@@ -126,9 +127,9 @@
           <div class="tomorrow-condition"></div>
         </div>
       </div>
-      <div class="card card-1 text-white">
+      <div class="card card-1 text-white col-lg-3 col-9">
         <div class="card-header title-1 text-center">
-          <small class="after-tomorrow">Saturday</small>
+          <small class="after-tomorrow"></small>
         </div>
 
         <div
@@ -144,14 +145,15 @@
     <p class="date text-white"></p>
     <footer class="py-5 text-white text-center">
       <div
-        class="input-search w-50 d-flex justify-content-between p-2 rounded-pill mx-auto"
+        class="footer-input input-search w-75 d-flex justify-content-between p-2 rounded-pill mx-auto"
       >
         <input
           type="text"
           placeholder="Enter your email to subscribe..."
-          class="border-0 w-75 bg-transparent text-white p-2"
+          class="border-0 bg-transparent text-white p-2 w-50"
+          
         />
-        <button class="btn btn-primary rounded-pill px-4 py-2">
+        <button class="btn btn-primary rounded-pill px-lg-4 py-lg-2">
           Subscribe
         </button>
       </div>
