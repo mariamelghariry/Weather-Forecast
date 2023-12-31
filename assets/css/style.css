@@ -1,0 +1,85 @@
+body{
+  background-color: #1E202B;
+}
+/* ?====================    Navbar Section */
+.navbar-toggler {
+  border: none;
+}
+.navbar-nav .nav-link.active{
+  color: white;
+}
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+.underline {
+  position: relative;
+  font-size: 15px;
+}
+.nav-link{
+  color: white;
+}
+.nav-link:hover{
+  color: white;
+
+}
+.nav-link:focus{
+  color: white;
+}
+.underline::after {
+  position: absolute;
+  content: "";
+  width: 0%;
+  height: 2px;
+  background-color: white;
+  bottom: 0%;
+  left: 0%;
+  transition: width 500ms;
+}
+
+.navbar-nav .nav-link.active::after {
+  width: 100%;
+}
+
+.navbar-nav {
+  align-items: center;
+}
+.image{
+  width: 60px;
+}
+a{
+ text-decoration: none;
+ color: inherit;
+}
+.main{
+  background-color: #1E202B;
+  height: 140px;
+}
+.nav-span{
+  font-size: 12px;
+  color: rgb(122, 122, 122);
+}
+header{
+  background-image: url(../images/banner.png);
+  height: 300px;
+}
+.input-search{
+  background-color: #1E202B;
+}
+input{
+  outline: none;
+}
+.card-1{
+  background-color: #323544;
+}
+.card-2{
+  background-color: #262936;
+}
+.title-1{
+  background-color: #2D303D;
+}
+.title-2{
+  background-color: #222530;
+}
+footer{
+  background-color: #262936;
+}

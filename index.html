@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <!-- !==========font awesome -->
+    <script
+      src="https://kit.fontawesome.com/2a9ac34a9d.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- !==========bootstrap css -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <!-- !==========main css -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body class="">
+    <div class="w-100 text-white">
+      <nav
+        class="main navbar navbar-expand-lg navbar-light mx-auto sticky-top"
+        id="navbar"
+      >
+        <div class="container w-75">
+          <div class="d-flex align-items-center text-white gap-2">
+            <img src="assets/images/logo2x.png" alt="" class="image" />
+            <div class="d-flex flex-column justify-content-center">
+              <p class="text-capitalize m-0">weather forecust</p>
+              <span class="nav-span text-capitalize">tagline goes here</span>
+            </div>
+          </div>
+          <button
+            class="navbar-toggler border-0"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <i class="fa-solid fa-bars text-white"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-5 text-white">
+              <li class="nav-item">
+                <a class="nav-link underline p-0 active" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link underline" href="#">News</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link underline" href="#">Live cameras</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link underline" href="#">Photos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link underline" href="#">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <header class="d-flex align-items-center justify-content-center">
+      <div
+        class="input-search w-75 d-flex justify-content-between p-2 rounded-pill"
+      >
+        <input
+          type="text"
+          placeholder="Find your location"
+          class="country border-0 w-75 bg-transparent text-white p-2"
+        />
+        <button class="search btn btn-primary rounded-pill px-4 py-2">
+          Find
+        </button>
+      </div>
+    </header>
+    <div class="card-group container py-5">
+      <div class="card card-1 text-white">
+        <div
+          class="card-header d-flex justify-content-between align-items-center title-1"
+        >
+          <p class="week-day m-0">Friday</p>
+          <p class="m-0">
+            <span class="day m-0"></span> <span class="month m-0"></span>
+          </p>
+        </div>
+        <div class="card-body">
+          <h5 class="card-title city"></h5>
+          <div class="d-flex justify-content-between">
+            <p class="today-forecast display-1 fw-bolder m-0 align-self-center">19°C</p>
+            <div class="weather-img w-100 d-flex justify-content-end">
+
+            </div>
+          </div>
+          <p class="weather-condition text-primary mt-3">Partly cloudy</p>
+          <div class="d-flex justify-content-evenly">
+            <div class="text-center"> 
+              <i class="fa-solid fa-umbrella"></i>
+              <p class="rain">20%</p>
+            </div>
+            <div class="text-center">
+              <i class="fa-solid fa-wind"></i>
+              <div class="wind-speed"></div>
+
+            </div>
+            <div class="text-center">
+              <i class="fa-solid fa-compass"></i>
+              <div class="wind-dir"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card card-2 text-white">
+        <div class="card-header title-2 text-center">
+          <small class="tomorrow"></small>
+        </div>
+
+        <div
+          class="card-body text-center d-flex flex-column justify-content-center gap-2"
+        >
+          <div class="tomorrow-img"></div>
+          <div class="tomorrow-max-temp"></div>
+          <div class="tomorrow-min-temp"></div>
+          <div class="tomorrow-condition"></div>
+        </div>
+      </div>
+      <div class="card card-1 text-white">
+        <div class="card-header title-1 text-center">
+          <small class="after-tomorrow">Saturday</small>
+        </div>
+
+        <div
+          class="card-body text-center d-flex flex-column justify-content-center gap-2"
+        >
+        <div class="atomorrow-img"></div>
+        <div class="atomorrow-max-temp"></div>
+        <div class="atomorrow-min-temp"></div>
+        <div class="atomorrow-condition"></div>
+        </div>
+      </div>
+    </div>
+    <p class="date text-white"></p>
+    <footer class="py-5 text-white text-center">
+      <div
+        class="input-search w-50 d-flex justify-content-between p-2 rounded-pill mx-auto"
+      >
+        <input
+          type="text"
+          placeholder="Enter your email to subscribe..."
+          class="border-0 w-75 bg-transparent text-white p-2"
+        />
+        <button class="btn btn-primary rounded-pill px-4 py-2">
+          Subscribe
+        </button>
+      </div>
+      <p class="mt-4">
+        Copyright 2014 Company name. Designed by Themezy. All rights reserved
+      </p>
+    </footer>
+
+
+    
+    <!-- !==========bootstrap js -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <!-- !==========main js -->
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
